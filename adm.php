@@ -86,7 +86,7 @@
         var requisicao;
         function verifiyNewMessages( timestamp )
         {
-            var queryString = { 'timestamp' : timestamp };
+            var queryString = { 'timestamp' : timestamp, type: "adm" };
          
             requisicao = $.post ( 'request.php' , queryString , function ( data )
             {
@@ -99,7 +99,7 @@
                 if($(".msg_container_base").html().length == 0){
                     for (var i = 1; i < qtd; i++) {
                         arr = messages[i].split("--|--");
-                        if(arr[1] == "client_sent"){
+                        if(arr[1] == "adm_sent"){
                             $(".msg_container_base").append(message_sent(arr[0]));
                         }else{
                             $(".msg_container_base").append(message_received(arr[0]));
@@ -107,7 +107,7 @@
                     };
                 }else{
                     arr = messages[qtd - 1].split("--|--");
-                    if(arr[1] == "client_sent"){
+                    if(arr[1] == "adm_sent"){
                         $(".msg_container_base").append(message_sent(arr[0]));
                     }else{
                         $(".msg_container_base").append(message_received(arr[0]));
@@ -148,7 +148,7 @@
                         <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">\
                     </div>\
                     <div class="col-md-10 col-xs-10">\
-                        <div class="messages msg_receive">\
+                        <div class="messages msg_sent">\
                             <p>' + message + '</p>\
                         </div>\
                     </div>\
@@ -158,13 +158,13 @@
 
         $(function(){
             verifiyNewMessages();
-
+            
             $("#form-send-message").submit(function(){
                 //requisicao.abort();
                 var texto = $(".chat_input").val();
                 $.post(
                     "send_message.php",
-                    {message: texto, type: "client_sent"},
+                    {message: texto, type: "adm_sent"},
                     function(data){
                        $(".chat_input").val("");
                        verifiyNewMessages(data);

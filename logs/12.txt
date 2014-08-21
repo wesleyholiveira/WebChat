@@ -1,0 +1,31 @@
+Inicio: 2014-08-15 00:16:01
+teste--|--client_sent
+teste--|--client_sent
+testando--|--client_sent
+aoba--|--client_sent
+iae--|--client_sent
+olá--|--client_sent
+td bem?--|--client_sent
+td ótimo, e vc?--|--client_sent
+to bem tbm--|--client_sent
+q bom--|--client_sent
+q ótimo--|--client_sent
+teste--|--client_sent
+legal--|--client_sent
+uhull--|--client_sent
+kkkk--|--client_sent
+iiiiiiiiiiii--|--client_sent
+teste--|--client_sent
+bulimba--|--adm_sent
+teste--|--client_sent
+champola--|--client_sent
+biluga--|--adm_sent
+champz--|--client_sent
+jhkj--|--adm_sent
+lkj--|--adm_sent
+hjk--|--adm_sent
+jhk--|--client_sent
+123--|--adm_sent
+321--|--client_sent
+444--|--adm_sent
+345--|--client_sent
