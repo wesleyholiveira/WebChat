@@ -1,4 +1,4 @@
-<?
+<?php
 require "php/config.php";
 require "classes/DataBase.class.php";
 
